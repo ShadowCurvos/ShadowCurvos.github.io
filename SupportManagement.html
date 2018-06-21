@@ -1,0 +1,278 @@
+<div class="container-fluid">
+
+	<!--我的状态start-->
+	<div class="col-lg-8 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-10 col-sm-offset-1" style="padding: 1px;">
+		<div class="panel panel-default myStylePanel">
+			<div class="panel-heading">
+				<h1 class="panel-title"><span class="glyphicon glyphicon-user"></span>我的状态</h1>
+			</div>
+			<div class="panel-body" style="padding: 5px;">
+
+				<!--模式选择器start-->
+				<div class="form-group col-lg-6 col-md-12 col-sm-6">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th width="70px">选项和设定</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="btn-group btn-group-justified btn-switch">
+										<a type="button" class="btn btn-default active" id="calForExpert">固定目标</a>
+										<a type="button" class="btn btn-default" id="calForRatio">固定比例</a>
+										<a type="button" class="btn btn-default" id="calBasedOnLevel">固定低保</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-group btn-group-justified btn-switch">
+										<a type="button" class="btn btn-default active" id="sleepModeDisable">我不睡</a>
+										<a type="button" class="btn btn-default" id="sleepModeActivate">我睡</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="btn-group btn-group-justified btn-switch appendixChoice">
+										<a type="button" class="btn btn-default active">资源</a>
+										<a type="button" class="btn btn-default">白契</a>
+										<a type="button" class="btn btn-default">蓝契</a>
+										<a type="button" class="btn btn-default">快建</a>
+										<a type="button" class="btn btn-default">快洗</a>
+										<a type="button" class="btn btn-default">币</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-condensed" st>
+						<thead>
+							<tr>
+								<th colspan="4">需求比例</th>
+								<th>睡眠</th>
+							</tr>
+							<tr>
+								<th>人力</th>
+								<th>弹药</th>
+								<th>口粮</th>
+								<th>零件</th>
+								<th>小时</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="resourceRatio">
+								<td><input type="text" class="form-control manPowerData"></td>
+								<td><input type="text" class="form-control ammoData"></td>
+								<td><input type="text" class="form-control provisionsData"></td>
+								<td><input type="text" class="form-control spareData"></td>
+								<td><input type="text" class="form-control sleepData"></td>
+							</tr>
+					</table>
+				</div>
+				<!--比例显示器-end-->
+
+				<!--资源填写栏start-->
+				<div class="form-group col-lg-6 col-md-12 col-sm-6">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<th width="70px">资源</th>
+								<th>现库存量</th>
+								<th>期望目标</th>
+							</tr>
+						</thead>
+						<tbody id="mainDataBox" class="testname">
+							<tr class="manPowerData">
+								<td style="padding: auto;vertical-align: middle;text-align: center;">人力</td>
+								<td><input type="text" class="form-control now" value=""></td>
+								<td><input type="text" class="form-control exceptResource"></td>
+							</tr>
+							<tr class="ammoData">
+								<td style="padding: auto;vertical-align: middle;text-align: center;">弹药</td>
+								<td><input type="text" class="form-control now"></td>
+								<td><input type="text" class="form-control exceptResource"></td>
+							</tr>
+							<tr class="provisionsData">
+								<td style="padding: auto;vertical-align: middle;text-align: center;">口粮</td>
+								<td><input type="text" class="form-control now"></td>
+								<td><input type="text" class="form-control exceptResource"></td>
+							</tr>
+							<tr class="spareData">
+								<td style="padding: auto;vertical-align: middle;text-align: center;">零件</td>
+								<td><input type="text" class="form-control now"></td>
+								<td><input type="text" class="form-control exceptResource"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--资源填写栏end-->
+
+				<!--生成按钮-start-->
+				<div class="form-group col-lg-6 col-md-12 col-sm-6">
+					<a class="btn btn-default btn-block" id="theCalBtn" style="font-size: 39px;">
+						算!</a>
+				</div>
+				<!--生成按钮-end-->
+
+				<div class="col-lg-4"></div>
+			</div>
+		</div>
+	</div>
+	<!--我的状态end-->
+
+	<!--推荐远征start-->
+	<div class="col-lg-8 col-lg-offset-2 col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1" style="padding: 1px;">
+		<div class="panel panel-default myStylePanel">
+			<div class="panel-heading">
+				<h1 class="panel-title"><span class="glyphicon glyphicon-user"></span>推荐远征</h1>
+			</div>
+			<div class="panel-body" style="padding: 5px;">
+
+				<!--睡眠套餐start-->
+				<div class="col-lg-6 col-md-12 col-sm-6">
+					<table class="table table-condensed table-col-fixed">
+						<thead>
+							<tr>
+								<th colspan="6">睡眠套餐</th>
+							</tr>
+							<tr>
+								<th>远征</th>
+								<th>人力</th>
+								<th>弹药</th>
+								<th>口粮</th>
+								<th>零件</th>
+								<th>时长</th>
+							</tr>
+						</thead>
+						<tbody class="sleepSupport" style="text-align: center;">
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="SummarySupport ">
+								<th class="name">统计</th>
+								<th class="manPower"></th>
+								<th class="ammo"></th>
+								<th class="provisions"></th>
+								<th class="spare"></th>
+								<th class='time'></th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--睡眠套餐end-->
+
+				<!--不眠圣僧start-->
+				<div class="col-lg-6 col-md-12 col-sm-6">
+					<table class="table table-condensed table-col-fixed">
+						<thead>
+							<tr>
+								<th colspan="6">不眠圣僧</th>
+							</tr>
+							<tr>
+								<th>远征</th>
+								<th>人力</th>
+								<th>弹药</th>
+								<th>口粮</th>
+								<th>零件</th>
+								<th>时长</th>
+							</tr>
+						</thead>
+						<tbody class="normalSupport" style="text-align: center;">
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="supportLine">
+								<td class="name">-</td>
+								<td class="manPower">-</td>
+								<td class="ammo">-</td>
+								<td class="provisions">-</td>
+								<td class="spare">-</td>
+								<td class='time'>-</td>
+							</tr>
+							<tr class="SummarySupport ">
+								<th class="name">统计</th>
+								<th class="manPower"></th>
+								<th class="ammo"></th>
+								<th class="provisions"></th>
+								<th class="spare"></th>
+								<th class='time'></th>
+							</tr>
+						</tbody>
+					</table>
+					</table>
+				</div>
+				<!--不眠圣僧end-->
+
+			</div>
+		</div>
+	</div>
+	<!--推荐远征end-->
+	<!--推荐远征start-->
+	<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1" style="padding: 1px;">
+		<div class="panel panel-default myStylePanel">
+			<div class="panel-heading">
+				<h1 class="panel-title"><span class="glyphicon glyphicon-user"></span>参考</h1>
+			</div>
+			<div class="panel-body" style="padding: 5px;text-align: center;">
+				<a href="//bbs.ngacn.cc/read.php?tid=13170579&rand=159">少女前线0-10图后勤收益表 by:ChairmanMeow.</a>
+				</br>web by:curvos 略有不准,仅供自用
+			</div>
+		</div>
+		<!--脚本部分-->
+
+	</div>
+
+	<script type="text/javascript" src="js/SupportManagement.js"></script>

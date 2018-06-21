@@ -1,0 +1,67 @@
+<!DOCTYPE HTML >
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>易筋经</title>
+		<link rel="icon" href="../../favicon.ico">
+		<link rel="stylesheet" href="bootstrap_v4/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/allstylesetting.css" />
+	</head>
+
+	<body>
+		<!--1.这里开始是导航栏的内容.
+			导航栏的标签是<nav>,这是HTML5原生的标签.
+			给导航栏添加.navbar的目的,是为了让他能被BS套用-->
+		<nav class="container-fluid navbar navbar-inverse navbar-fixed-top">
+			<!--2.navbar-default是默认样式,navbar-inverse是反色,即黑色样式
+			navbar-fixed-top为了固定到顶部-->
+			<div class="container">
+				<!--.container标注了栅格系统的开始-->
+				<div class="navbar-header">
+					<!--.navbar-header指定了这个div作为导航栏的总标签-->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<!--data-toggle属性指定了一个触发事件,data-target指定了这个事件的目标
+							在这里,当BS的折叠事件发生时,就指定了ID为navbar的目标-->
+						<!--.collapse用于创造响应式菜单栏-->
+            				<span class="sr-only">Toggle navigation</span>
+            				<!--.sr-only供给给特殊人群使用-->
+            				<span class="icon-bar"></span>
+            				<!--.icon-bar用于创造汉堡按钮-->
+            				<span class="icon-bar"></span>
+            				<span class="icon-bar"></span>
+          			</button>
+					<a class="navbar-brand btn btn-inverse" target="WelcomePage.html">少女前线个人工具</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav" id="navbarSelectMod">
+						<li>
+							<a class="btn btn-inverse" target="SupportManagement.html">后勤计算器</a>
+						</li>
+						<li>
+							<a class="btn btn-inverse" target="Error.html">开发中</a>
+						</li>
+						<li>
+							<a class="btn btn-inverse" target="Error.html">开发中</a>
+						</li>
+					</ul>
+					<!--/.nav-collapse -->
+				</div>
+				<!--这里是栅格系统的结束-->
+			</div>
+		</nav>
+		<!--加载区-->
+		<div id="iframeDiv">
+		</div>
+
+		<!--脚本部分-->
+		<script src="bootstrap_v4/js/jquery-2.1.0.js"></script>
+		<script src="bootstrap_v4/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/SwithNavbar.js"></script>
+	</body>
+
+</html>
