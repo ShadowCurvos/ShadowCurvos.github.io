@@ -123,10 +123,11 @@ $(document).ready(function() {
 		$("#mainDataBox .exceptResource:not(:eq(0))").attr("disabled", "disabled");
 		$("#resourceRatio input:not(.sleepData)").attr("disabled", "disabled");
 		$("#mainDataBox .now").removeAttr("disabled");
+		$("#mainDataBox .exceptResource:eq(0)").removeAttr("disabled");
 		$("#mainDataBox .exceptResource:not(:eq(0))").val($("#mainDataBox .exceptResource:eq(0)").val());
 		calRatio();
+		calMode = 2;
 	});
-	calMode = 2;
 	//模式选择设定end
 
 	//睡眠模式设定
